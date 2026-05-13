@@ -1,0 +1,16 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/*background*/
+body {
+  background-color: #111009;
+  color: #e0d8cc;
+  font-family: 'Georgia', 'Times New Roman', serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}

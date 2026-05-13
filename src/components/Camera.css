@@ -1,0 +1,164 @@
+/*Camera Page*/
+.camera-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 2rem 1rem;
+}
+
+/*Heading*/
+.camera-title {
+  font-size: 0.75rem;
+  letter-spacing: 0.45em;
+  text-transform: uppercase;
+  color: #7a6e62;
+  margin-bottom: 2rem;
+  font-weight: 400;
+}
+
+/*Frame*/
+/*Camera view finder*/
+.camera-frame {
+  position: relative;
+  width: 100%;
+  max-width: 580px;
+
+  /* Two-layer border: inner warm tone + outer near-black gap via box-shadow */
+  border: 1.5px solid #4a3f30;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 5px #111009,
+    0 0 0 6px #2e2820,
+    0 12px 40px rgba(0, 0, 0, 0.7);
+  overflow: hidden;
+  background: #0a0907;
+}
+
+/*Corner brackets*/
+.camera-frame .corner {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  z-index: 2;
+}
+
+.camera-frame .corner-tl {
+  top: -6px;
+  left: -6px;
+  border-top: 2px solid #c8a96e;
+  border-left: 2px solid #c8a96e;
+  border-radius: 4px 0 0 0;
+}
+
+.camera-frame .corner-tr {
+  top: -6px;
+  right: -6px;
+  border-top: 2px solid #c8a96e;
+  border-right: 2px solid #c8a96e;
+  border-radius: 0 4px 0 0;
+}
+
+.camera-frame .corner-bl {
+  bottom: -6px;
+  left: -6px;
+  border-bottom: 2px solid #c8a96e;
+  border-left: 2px solid #c8a96e;
+  border-radius: 0 0 0 4px;
+}
+
+.camera-frame .corner-br {
+  bottom: -6px;
+  right: -6px;
+  border-bottom: 2px solid #c8a96e;
+  border-right: 2px solid #c8a96e;
+  border-radius: 0 0 4px 0;
+}
+
+/*Camera stream*/
+.camera-frame video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  background: #0a0907;
+  border-radius: 10px;
+}
+
+/*Captured photo*/
+.camera-frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 75vh;
+  object-fit: contain;
+  background: #0a0907;
+  border-radius: 10px;
+}
+
+/*Placeholder for idle camera*/
+.camera-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 4 / 3;
+  color: #2e2820;
+  font-size: 3.5rem;
+  user-select: none;
+}
+
+/*Controls*/
+
+/* Row of buttons beneath the frame */
+.camera-controls {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Base button (outlined, uppercase, restrained) */
+.btn {
+  padding: 0.55rem 1.5rem;
+  font-family: inherit;
+  font-size: 0.7rem;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: #9a8878;
+  background: transparent;
+  border: 1px solid #3a3028;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: color 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+}
+
+.btn:hover {
+  color: #e0d0b8;
+  border-color: #c8a96e;
+  background: rgba(200, 169, 110, 0.07);
+}
+
+.btn:active {
+  background: rgba(200, 169, 110, 0.14);
+}
+
+/*Save button*/
+.btn-primary {
+  color: #1a1510;
+  background: #c8a96e;
+  border-color: #c8a96e;
+}
+
+.btn-primary:hover {
+  background: #d9bc86;
+  border-color: #d9bc86;
+  color: #111009;
+}
+
+.btn-primary:active {
+  background: #b89558;
+  border-color: #b89558;
+}
